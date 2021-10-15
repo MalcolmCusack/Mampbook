@@ -47,29 +47,14 @@ echo <<<_END
         <form method='post' action='signup.php'>$error
 
             <div data-role='fieldcontain'>
-                <input class='signupInput'  placeholder="User name" type='text' maxlength='16' name='user' value='$user'>
+                <input class='signupInput'  placeholder="User name" type='text' maxlength='16' name='user' value='$user' onBlur='checkUser(this)'>
                 <label></label>
             </div>
 
-            <div  data-role='fieldcontain'>
-                <input class='signupInput' placeholder="Phone number or email" type='text' maxlength='16' name='phone' value='phone'>
-                <label></label>
-            </div>
+           
 
             <div  data-role='fieldcontain'>
                 <input class='signupInput' placeholder="New password"type='text' maxlength='16' name='pass' value='$pass'>
-            </div>
-
-            <div class='birthday' data-role='fieldcontain'>
-                <h4 >Birthday</h4>
-                <input class='signupInput' type="date" name='date' value='date'>
-            </div>
-
-            <div class='radio' data-role='fieldcontain'>
-                <input type='radio' name='gender' value='female'>
-                <label>Female</label>
-                <input type='radio' name='gender' value='male'>
-                <label>Male</label>
             </div>
             
             <p class='tnc'>By clicking Create Account, you agree to sell us all your lamps</p>

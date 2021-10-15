@@ -47,25 +47,25 @@ $following = array_diff($following, $mutual);
 $friends   = FALSE;
 
 if (sizeof($mutual)) {
-    echo "<h3>$name2 mutual friends</h3><ul>";
+    echo "<h3 class='friendHeader'>$name2 mutual friends</h3><ul>";
     foreach($mutual as $friend)
-    echo "<li><a href='members.php?view=$friend'>$friend</a>";
+    echo "<li class='friendLi'><a href='members.php?view=$friend'>$friend</a>";
     echo "</ul>";
     $friends = TRUE;
 }
 
 if (sizeof($followers)) {
-    echo "<h3>$name2 followers</h3><ul>";
+    echo "<h3 class='friendHeader'>$name2 followers</h3><ul>";
     foreach($followers as $friend)
-    echo "<li><a href='members.php?view=$friend'>$friend</a>";
+    echo "<li class='friendLi'><a href='members.php?view=$friend'>$friend</a>";
     echo "</ul>";
     $friends = TRUE;
 }
 
 if (sizeof($following)) {
-    echo "<h3>$name3 following</h3><ul>";
+    echo "<h3 class='friendHeader'>$name3 following</h3><ul>";
     foreach($following as $friend)
-        echo "<li><a href='members.php?view=$friend'>$friend</a>";
+        echo "<li class='friendLi'><a href='members.php?view=$friend'>$friend</a>";
     echo "</ul>";
     $friends = TRUE;
 }

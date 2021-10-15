@@ -93,8 +93,6 @@ header {
     padding: 3px;
 }
 
-
-
 nav {
     position: absolute;
     width: 100%;
@@ -156,8 +154,21 @@ nav li a:hover {
     padding-bottom: 80px;
 }
 
+.friendHeader {
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.friendLi {
+    padding: 5px;
+}
+
+.friendLi::marker {
+    content: "🔥";
+}
+
 .username {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-style: bold;
     padding-left: 10px;
     margin: 20px;
@@ -181,11 +192,8 @@ nav li a:hover {
 }
 
 #spaceImg {
-    width: 200px;
-}
-#spaceImg {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: auto;
 }
 
 textarea {
@@ -206,4 +214,12 @@ footer {
 
 footer a {
     color: white;
+}
+
+.fbBody {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
 }
