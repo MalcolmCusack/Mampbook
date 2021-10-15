@@ -15,6 +15,9 @@ function createTable($name, $query){
     echo "Table '$name' created or already exists.<br>";
 }
 
+$driver = new mysqli_driver();
+$driver->report_mode = MYSQLI_REPORT_ALL;
+
 function queryMysql($query) {
     global $connection;
     $result = $connection->query($query);
@@ -30,6 +33,7 @@ function destroySession() {
 
     session_destroy();
 }
+
 
 function sanitizeString($var){
     global $connection;
