@@ -43,18 +43,16 @@ if (isset($_POST['user'])) {
 echo <<<_END
     <div class='signup'>
         <h1 class='sntitle'>Sign Up</h1>
-        <h3 class='belowTitle>We steal your data.</h2>
+        <h3 class='belowTitle'>We steal your data.</h3>
         <form method='post' action='signup.php'>$error
 
             <div data-role='fieldcontain'>
-                <input class='signupInput'  placeholder="User name" type='text' maxlength='16' name='user' value='$user' onBlur='checkUser(this)'>
+                <input class='signupInput'  placeholder='User name' type='text' maxlength='16' name='user' value='$user'>
                 <label></label>
             </div>
 
-           
-
             <div  data-role='fieldcontain'>
-                <input class='signupInput' placeholder="New password"type='text' maxlength='16' name='pass' value='$pass'>
+                <input class='signupInput' placeholder="New password" type='text' maxlength='16' name='pass' value='$pass'>
             </div>
             
             <p class='tnc'>By clicking Create Account, you agree to sell us all your lamps</p>

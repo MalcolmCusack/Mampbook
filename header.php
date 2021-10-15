@@ -14,7 +14,6 @@ echo <<<_INIT
         <script src='javascript.js'></script>
         <script src='spacephoto.js'></script>
         <link href="https://fonts.googleapis.com/css?family=PTSansNarrow|Lora|Muli|Source+Sans+Pro|Playfair+Display&display=swap" rel="stylesheet">
-
         <title>$clubstr: $userstr</title>
         </head>
 _INIT;
