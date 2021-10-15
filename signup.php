@@ -34,7 +34,7 @@ if (isset($_POST['user'])) {
         if ($result->num_rows)
             $error = 'That username already exists<br><br>';
         else {
-            queryMysql("INSERT INTO members VALUES('$user', '$pass', '$phone', '$date')");
+            queryMysql("INSERT INTO members VALUES('$user', '$pass')");
             die('<h4>Account created</h4>Please Log in.</div></body></html>');
         }
     }

@@ -41,7 +41,7 @@ if ($view != "") {
         <textarea name='text'></textarea><br>
     </fieldset>
 
-    <input data-transition='slide' type='submit' value='Post Message'>
+    <input class='followBttn' data-transition='slide' type='submit' value='Post Message'>
 </form><br>
 _END;
 
@@ -65,9 +65,9 @@ for ($j = 0 ; $j < $num ; ++$j)
       echo " <a href='messages.php?view=" . $row['auth'] . "'>" . $row['auth']. "</a> ";
 
       if ($row['pm'] == 0)
-          echo "wrote a <em>public post</em>:<div>&quot;" . $row['message'] . "&quot; ";
+          echo "wrote a <em>public post</em>:<div class='quote'>&quot;" . $row['message'] . "&quot; ";
       else
-          echo "wrote a <em>private note</em>:<br><div>&quot;" . $row['message']. "&quot; ";
+          echo "wrote a <em>private note</em>:<br><div class='quote'>&quot;" . $row['message']. "&quot; ";
 
       if ($row['recip'] == $user)
           echo "[<a href='messages.php?view=$view" . "&erase=" . $row['id'] . "'>Delete</a>]";
@@ -79,7 +79,7 @@ for ($j = 0 ; $j < $num ; ++$j)
 if (!$num)
     echo "<br><span class='info'>No messages yet</span><br><br>";
 
-echo "<br><a data-role='button' href='messages.php?view=$view'>Refresh messages</a>";
+echo "<br><a class='followBttn' data-role='button' href='messages.php?view=$view'>Refresh messages</a>";
 
 require_once 'footer.php';
 ?>

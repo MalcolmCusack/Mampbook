@@ -16,7 +16,7 @@ if (isset($_GET['view'])) {
 
     echo "<h3>$name Profile</h3>";
     showProfile($view);
-    echo "<a href='messages.php?view=$view'>View $name messages</a>";
+    echo "<a class='followBttn' href='messages.php?view=$view'>View $name messages</a>";
     die(require 'footer.php');
 }
 
@@ -42,7 +42,7 @@ for ($j = 0 ; $j < $num ; ++$j) {
     if ($row['user'] == $user)
         continue;
 
-    echo "<li><a data-transition='slide' href='members.php?view=" .
+    echo "<li class='membersLi'><a data-transition='slide' href='members.php?view=" .
     $row['user'] . "'>" . $row['user'] . "</a>";
     $follow = "follow";
 
@@ -52,18 +52,18 @@ for ($j = 0 ; $j < $num ; ++$j) {
     $t2      = $result1->num_rows;
 
     if (($t1 + $t2) > 1) 
-        echo " &harr; is a mutual friend";
+        echo " is a mutual friend";
     elseif ($t1) 
-        echo " &larr; you are following";
+        echo " you are following";
     elseif ($t2) { 
-        echo " &rarr; is following you";
-        $follow = "recip"; 
+        echo " is following you";
+        $follow = "Follow"; 
     }
 
     if (!$t1) 
-        echo " [<a href='members.php?add=" . $row['user'] . "'>$follow</a>]";
+        echo " <a class='followBttn' href='members.php?add=" . $row['user'] . "'>$follow</a>";
     else
-        echo " [<a href='members.php?remove=" . $row['user'] . "'>drop</a>]";
+        echo " <a class='followBttn' href='members.php?remove=" . $row['user'] . "'>drop</a>";
 }
 echo "</ul>";
 require_once 'footer.php';

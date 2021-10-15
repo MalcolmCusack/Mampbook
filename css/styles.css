@@ -29,7 +29,7 @@ html {
 
 header {
     background-color: #f7f7f7;
-    background-color: #3b5998;
+    background: linear-gradient(90deg, rgba(59,89,152,0.9962359943977591) 0%, rgba(247,247,247,1) 51%, rgba(2,0,36,1) 100%);
     height: 150px;
     width: 100%;
     display: flex;
@@ -152,6 +152,7 @@ nav li a:hover {
     padding: 0 50px;
     background-color: #f7f7f7;
     padding-bottom: 80px;
+    
 }
 
 .friendHeader {
@@ -167,11 +168,25 @@ nav li a:hover {
     content: "🔥";
 }
 
+.membersLi::marker {
+    content:"🥷";
+}
+
+.membersLi {
+    padding: 5px;
+    margin: 10px;
+
+}
+
 .username {
+    width: fit-content;
     font-size: 1.5em;
     font-style: bold;
     padding-left: 10px;
     margin: 20px;
+    margin-left: 40px;
+    padding-right: 10px;
+    border-bottom: 1px solid #3b5998;
 }
 
 .userpic {
@@ -186,14 +201,49 @@ nav li a:hover {
     margin: 0 40px 20px 0px;
 }
 
-.test {
-    width: 200px;
-    height: 20px;
+#spacephotoDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgTitle {
+    margin: 10px;
+}
+
+#imgDate {
+    margin: 10px;
 }
 
 #spaceImg {
     width: 500px;
     height: auto;
+    border: 5px solid;
+    border-radius: 10px;
+    border-image: linear-gradient(to bottom, #3b5998, rgba(0,0,0,0))1 100%;
+}
+
+.followBttn {
+    border: 1px solid black;
+    background: green;
+    border-radius: 10px;
+    padding: 6px;
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.quote {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.followBttn:hover {
+    transform: scale(1.2);
 }
 
 textarea {
@@ -207,19 +257,27 @@ textarea {
 footer {
     font-family: 'Muli', sans-serif;
     padding: 5px;
-    color: #ddd;
-    background-color: #222;
+    color: black;
+    background-color: #f7f7f7;
+    border-top: 1px solid black;
     font-size: .9em;
 }
 
-footer a {
-    color: white;
-}
 
 .fbBody {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+}
+
+canvas {
+    margin-top: 20px;
+}
+
+.fbHeader {
+    margin: 20px;
 }

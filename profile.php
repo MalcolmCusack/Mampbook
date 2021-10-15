@@ -70,8 +70,8 @@ echo <<<_END
         <textarea name='text'>$text</textarea><br>
         <h3>Upload an image</h3>
         Image: <br>
-        <input type='file' name='image' size='14'><br><br>
-        <input type='submit' value='Save Profile'>
+        <input class='followBttn' type='file' name='image' size='14'><br><br>
+        <input class='followBttn' type='submit' value='Save Profile'>
     </form>
 _END;
 
