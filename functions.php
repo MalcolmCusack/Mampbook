@@ -15,8 +15,8 @@ function createTable($name, $query){
     echo "Table '$name' created or already exists.<br>";
 }
 
-$driver = new mysqli_driver();
-$driver->report_mode = MYSQLI_REPORT_ALL;
+#$driver = new mysqli_driver();
+#$driver->report_mode = MYSQLI_REPORT_ERROR;
 
 function queryMysql($query) {
     global $connection;

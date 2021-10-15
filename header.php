@@ -18,9 +18,7 @@ echo <<<_INIT
         </head>
 _INIT;
 
-if (!$loggedin) {
 require_once 'functions.php';
-}
 
 if (isset($_SESSION['user'])) {
     $user     = $_SESSION['user'];
@@ -65,7 +63,8 @@ echo <<<_GUEST
 
             <nav><ul>
                 <li><a href='index.php'>Home</a></li>
-                <li><a href='spacePhoto.php'>Photo Of The Day</a></li>
+                <li><a href='spacephoto.php'>Photo Of The Day</a></li>
+                <li><a href='flappybird.html'>Flappy Bird</a></li>
             </ul></nav>
 _GUEST;
  }
