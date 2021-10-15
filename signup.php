@@ -23,8 +23,8 @@ if (isset($_SESSION['user']))
 if (isset($_POST['user'])) {
     $user = sanitizeString($_POST['user']);
     $pass = sanitizeString($_POST['pass']);
-    $phone = sanitizeString($_POST['phone']);
-    $date = sanitizeString($_POST['date']);
+    #$phone = sanitizeString($_POST['phone']);
+    #$date = sanitizeString($_POST['date']);
 
     if ($user == "" || $pass == "")
         $error = 'Not all fields were entered<br><br>';
@@ -52,7 +52,7 @@ echo <<<_END
             </div>
 
             <div  data-role='fieldcontain'>
-                <input class='signupInput' placeholder="Phone number or email" type='text' maxlength='16' name='phone' value='$phone'>
+                <input class='signupInput' placeholder="Phone number or email" type='text' maxlength='16' name='phone' value='phone'>
                 <label></label>
             </div>
 
@@ -62,13 +62,13 @@ echo <<<_END
 
             <div class='birthday' data-role='fieldcontain'>
                 <h4 >Birthday</h4>
-                <input class='signupInput' type="date" name='date' value='$date'>
+                <input class='signupInput' type="date" name='date' value='date'>
             </div>
 
             <div class='radio' data-role='fieldcontain'>
-                <input type='radio' name='gender' value='$female'>
+                <input type='radio' name='gender' value='female'>
                 <label>Female</label>
-                <input type='radio' name='gender' value='$male'>
+                <input type='radio' name='gender' value='male'>
                 <label>Male</label>
             </div>
             
