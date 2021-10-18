@@ -16,7 +16,7 @@ echo <<<_END
 </script>  
 _END;
 
-$error = $user = $pass = "";
+$error = $user = $pass = $phone = $date = "";
 if (isset($_SESSION['user'])) 
     destroySession();
 
