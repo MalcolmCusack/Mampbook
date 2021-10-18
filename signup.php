@@ -59,11 +59,8 @@ echo <<<_END
                 <h4 >Birthday</h4>
                 <input class='signupInput' type="date" name='date' value='$date'>
             </div>
-            <div class='radio' data-role='fieldcontain'>
-                <input type='radio' name='gender' value='$phone'>
-                <label>Female</label>
-                <input type='radio' name='gender' value='$phone'>
-                <label>Male</label>
+            <div  data-role='fieldcontain'>
+                <input placeholder="Phone number" class='signupInput type='text' name='phone' value='$phone'>
             </div>
             
             <p class='tnc'>By clicking Create Account, you agree to sell us all your lamps</p>
