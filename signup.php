@@ -23,10 +23,10 @@ if (isset($_SESSION['user']))
 if (isset($_POST['user'])) {
     $user = sanitizeString($_POST['user']);
     $pass = sanitizeString($_POST['pass']);
-    //$phone = sanitizeString($_POST['phone']);
-    //$date = sanitizeString($_POST['date']);
+    $phone = sanitizeString($_POST['phone']);
+    $date = sanitizeString($_POST['date']);
 
-    if ($user == "" || $pass == "")
+    if ($user == "" || $pass == "" || $phone == "" || $date == "")
         $error = 'Not all fields were entered<br><br>';
     else {
         $result = queryMysql("SELECT * FROM members WHERE user='$user'");
@@ -34,7 +34,7 @@ if (isset($_POST['user'])) {
         if ($result->num_rows)
             $error = 'That username already exists<br><br>';
         else {
-            queryMysql("INSERT INTO members VALUES('$user', '$pass', '123', '123' )");
+            queryMysql("INSERT INTO members VALUES('$user', '$pass', '$phone', '$date' )");
             die('<h4>Account created</h4>Please Log in.</div></body></html>');
         }
     }
@@ -53,6 +53,17 @@ echo <<<_END
 
             <div  data-role='fieldcontain'>
                 <input class='signupInput' placeholder="New password" type='text' maxlength='16' name='pass' value='$pass'>
+            </div>
+            
+            <div class='birthday' data-role='fieldcontain'>
+                <h4 >Birthday</h4>
+                <input class='signupInput' type="date" name='date' value='$date'>
+            </div>
+            <div class='radio' data-role='fieldcontain'>
+                <input type='radio' name='gender' value='$phone'>
+                <label>Female</label>
+                <input type='radio' name='gender' value='$phone'>
+                <label>Male</label>
             </div>
             
             <p class='tnc'>By clicking Create Account, you agree to sell us all your lamps</p>

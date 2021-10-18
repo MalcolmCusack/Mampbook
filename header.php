@@ -32,7 +32,7 @@ echo <<<_HEADER_OPEN
     <body>
         <div id="wrapper">
         <header>
-            <img class="headerImg" src="https://png2.cleanpng.com/sh/d592d248be2e1659917c8e032b9d4624/L0KzQYm3VcAyN6lofZH0aYP2gLBuTftwdqV0itp4bH3ofn7rhgNsNZZze9N5c4XvccXshL1xd6R5i9V7aYD3PbTzigAuaaN5RdZuc3uwfLL0kL10cZ1thAdudITog368gfU5a5I5TqoCMUm1RnA4VsczQGU3UaMAMkW1QIa8V8Q2PWQ5RuJ3Zx==/kisspng-kontorholmen-desk-encapsulated-postscript-clip-art-desk-lamp-silhouettes-5ae8ca46871926.1672842915252055745534.png"/>
+            <img class="headerImg" src="https://cdn.icon-icons.com/icons2/2248/PNG/512/desk_lamp_icon_136702.png"/>
             <div id='logo'>$clubstr</div>
 
 _HEADER_OPEN;
