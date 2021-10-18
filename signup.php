@@ -23,8 +23,8 @@ if (isset($_SESSION['user']))
 if (isset($_POST['user'])) {
     $user = sanitizeString($_POST['user']);
     $pass = sanitizeString($_POST['pass']);
-    $phone = sanitizeString($_POST['phone']);
-    $date = sanitizeString($_POST['date']);
+    //$phone = sanitizeString($_POST['phone']);
+    //$date = sanitizeString($_POST['date']);
 
     if ($user == "" || $pass == "")
         $error = 'Not all fields were entered<br><br>';
@@ -34,7 +34,7 @@ if (isset($_POST['user'])) {
         if ($result->num_rows)
             $error = 'That username already exists<br><br>';
         else {
-            queryMysql("INSERT INTO members VALUES('$user', '$pass', $phone, $date)");
+            queryMysql("INSERT INTO members VALUES('$user', '$pass')");
             die('<h4>Account created</h4>Please Log in.</div></body></html>');
         }
     }
@@ -47,7 +47,7 @@ echo <<<_END
         <form method='post' action='signup.php'>$error
 
             <div data-role='fieldcontain'>
-                <input class='signupInput'  placeholder='User name' type='text' maxlength='16' name='user' value='$user'>
+                <input class='signupInput'  placeholder='User name' type='text' maxlength='16' name='user' value='$user' onBlur='checkUser(this)>
                 <label></label>
             </div>
 
