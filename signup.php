@@ -23,8 +23,8 @@ if (isset($_SESSION['user']))
 if (isset($_POST['user'])) {
     $user = sanitizeString($_POST['user']);
     $pass = sanitizeString($_POST['pass']);
-    #$phone = sanitizeString($_POST['phone']);
-    #$date = sanitizeString($_POST['date']);
+    $phone = sanitizeString($_POST['phone']);
+    $date = sanitizeString($_POST['date']);
 
     if ($user == "" || $pass == "")
         $error = 'Not all fields were entered<br><br>';
